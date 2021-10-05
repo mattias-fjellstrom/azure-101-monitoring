@@ -24,7 +24,6 @@ const httpTrigger: AzureFunction = async function (
     req.body.schemaId === "Microsoft.Insights/LogAlert"
   ) {
     alert = req.body.data as LogAlert
-    context.log(`Posting LogAlert to Teams: ${alert}`)
 
     const card = {
       "@type": "MessageCard",
@@ -54,7 +53,6 @@ const httpTrigger: AzureFunction = async function (
     }
 
     try {
-      context.log(process.env.WEBHOOK)
       const response = await axios.post(process.env.WEBHOOK, card, {
         headers: {
           "content-type": "application/vnd.microsoft.teams.card.o365connector",
