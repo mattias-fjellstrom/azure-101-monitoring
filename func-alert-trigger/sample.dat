@@ -1,8 +1,0 @@
-{
-  "schemaId": "Microsoft.Insights/LogAlert",
-  "data": {
-    "AlertRuleName": "Upload are failing",
-    Description: "Alert by Mattias Fjellström",
-    Severity: "1"
-  }
-}
